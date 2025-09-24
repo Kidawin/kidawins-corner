@@ -1,18 +1,9 @@
-
-/* user styles */
-
-/* styles are what change the color and sizes of stuff on your site. */
-
-/* these are variables that are being used in the code
-    these tended to confuse some people, so I only kept 
-    the images as variables */
-
 :root {
     --header-image: url('/images/banners/banner1.png');
-    --body-bg-image: url('/images/backgrounds/ss035.gif');
+    --body-bg-image: url('/images/backgrounds/blue185.jpg');
 
      /* colors */
-  --content: var(--fourth-light2);
+  --content: var(--main-light2);
 
   --main-light1: #8197BC;
   --main-light2: #536E9C;
@@ -20,61 +11,37 @@
   --main-mid2: #213E6F;
   --main-dark1: #0D2855;
 
-  --second-light1: #9187C2;
-  --second-light2: #6659A3;
-  --second-mid1: #493A89;
-  --second-mid2: #332574;
-  --second-dark1: #1D1058;
-
-  --third-light1: #FFEEA6;
-  --third-light2: #ECD472;
-  --third-mid1: #C7AD44;
-  --third-mid2: #A88F26;
-  --third-dark1: #806909;
-
-  --fourth-light1: #FFDFA6;
-  --fourth-light2: #ECC072;
-  --fourth-mid1: #C79844;
-  --fourth-mid2: #A87926;
-  --fourth-dark1: #805509;
 }
-
-/* Colors! OLD
-lightest
-9785C1
-6D57A1
-503888
-3B2373
-250F58
-*/
 
 
 @font-face {
-    font-family: Nunito;
-    src: url('/fonts/Nunito-Regular.ttf');
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Regular.ttf');
 }
 
 @font-face {
-    font-family: Nunito;
-    src: url('/fonts/Nunito-Bold.ttf');
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Bold.ttf');
     font-weight: bold;
 }
 
 @font-face {
-    font-family: Nunito;
-    src: url('/fonts/Nunito-Italic.ttf');
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Italic.ttf');
     font-style: italic;
 }
 
 @font-face {
-    font-family: Nunito;
-    src: url('/fonts/Nunito-BoldItalic.ttf');
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-BoldItalic.ttf');
     font-style: italic;
     font-weight: bold;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'intel one', sans-serif;
+ 
+    padding: 0;
     margin: 0;
     background-color: #08031A;
     /* you can delete the line below if you'd prefer to not use an image */
@@ -87,56 +54,16 @@ body {
     box-sizing: border-box;
 }
 
-/* below this line is CSS for the layout */
-
-/* this is a CSS comment
-    to uncomment a line of CSS, remove the * and the /
-    before and after the text */
-
-
-/* the "container" is what wraps your entire website */
-/* if you want something (like the header) to be Wider than
-    the other elements, you will need to move that div outside
-    of the container */
-#container {
-    max-width: 900px;
-    /* this is the width of your layout! */
-    /* if you change the above value, scroll to the bottom
-      and change the media query according to the comment! */
-    margin: 0 auto;
-    /* this centers the entire page */
-}
-
-/* the area below is for all links on your page
-    EXCEPT for the navigation */
-#container a {
-    color: #bda6fd;
-    font-weight: bold;
-    /* if you want to remove the underline
-      you can add a line below here that says:
-      text-decoration:none; */
-}
-#credits-main a{
-    color: black;
-}
-#credits-main embed{
-    width: 50%;
-    height: 600px;
-
-}
-#guest-book{
-
-}
 
 #header {
     width: 100%;
-    background-color: #1e1435;
+    background-color: #000000;
     /* header color here! */
     height: 150px;
     /* this is only for a background image! */
     /* if you want to put images IN the header, 
       you can add them directly to the <div id="header"></div> element! */
-    background-image: var(--header-image);
+    background-image: var();
     background-size: 100%;
 }
 
@@ -152,13 +79,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
-    
 }
 
 /* navigation links*/
 .topbar a {
-    color: white;
+    color: rgb(255, 255, 255);
     /* navbar text color */
     font-weight: 800;
     text-decoration: none;
@@ -167,9 +92,26 @@ body {
 
 /* navigation link when a link is hovered over */
 .topbar a:hover {
-    color: #a49cba;
+    color: #ffffff;
     text-decoration: underline;
 }	
+
+
+
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+#container {
+    max-width: 1100px;
+    /* this is the width of your layout! */
+    /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+    margin: 0 auto;
+    /* this centers the entire page */
+}
+
 
 #flex {
     display: flex;
@@ -179,11 +121,11 @@ body {
 
 #rightSidebar {
     order: 2;
-    
+    margin-left: 10px;
 }
 
 #rightSidebar article {
-    width: 200px;
+    width: 250px;
     padding: 10px;
     font-size: smaller;
     margin-top: 10px;
@@ -206,21 +148,14 @@ body {
     padding: 0;
 }
 
-#list-item-steam {
-    list-style: none;
-    list-style-image: url('/images/icons/steam10x10.png');
-}
-#list-item-yt{
-    list-style: none;
-    list-style-image: url('/images/icons/yt10x10.png');
-}
-#list-item-bsky{
-    list-style: none;
-    list-style-image: url('/images/icons/bsky10x10.png');
-}
 
 #other p{
     text-align: center;
+    
+}
+
+#other a{
+    color: white;
 }
 /* this is the color of the main content area,
     between the sidebars! */
@@ -277,6 +212,7 @@ footer {
     border-radius: 10px;
     border-width: 4px;
     border-style:double;
+    margin-top: 10px;
 }
 
 h1,
@@ -304,7 +240,7 @@ strong {
     "max-width" value below
     */
 
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 1000px) {
                 #flex {
                     flex-wrap: wrap;
                 }
