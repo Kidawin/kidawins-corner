@@ -1,6 +1,7 @@
 :root {
     --header-image: url('/images/banners/banner1.png');
     --body-bg-image: url('/images/backgrounds/blue185.jpg');
+    --body-bg-image: url('/images/backgrounds/blue185.jpg');
 
      /* colors */
   --content: var(--main-light2);
@@ -84,6 +85,7 @@ body {
 /* navigation links*/
 .topbar a {
     color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     /* navbar text color */
     font-weight: 800;
     text-decoration: none;
@@ -92,6 +94,7 @@ body {
 
 /* navigation link when a link is hovered over */
 .topbar a:hover {
+    color: #ffffff;
     color: #ffffff;
     text-decoration: underline;
 }	
