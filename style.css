@@ -1,7 +1,6 @@
 :root {
     --header-image: url('/images/banners/banner1.png');
     --body-bg-image: url('/images/backgrounds/blue185.jpg');
-    --body-bg-image: url('/images/backgrounds/blue185.jpg');
 
      /* colors */
   --content: var(--main-light2);
@@ -39,12 +38,12 @@
     font-weight: bold;
 }
 
-body {
+/* Index */
+
+#indexBody {
     font-family: 'intel one', sans-serif;
- 
     padding: 0;
     margin: 0;
-    background-color: #08031A;
     /* you can delete the line below if you'd prefer to not use an image */
     background-size: 150px;
     color: #fceaff;
@@ -80,11 +79,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 /* navigation links*/
 .topbar a {
-    color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     /* navbar text color */
     font-weight: 800;
@@ -92,42 +93,65 @@ body {
     /* this removes the underline */
 }
 
-/* navigation link when a link is hovered over */
 .topbar a:hover {
-    color: #ffffff;
     color: #ffffff;
     text-decoration: underline;
 }	
 
-
-
-
-/* the "container" is what wraps your entire website */
-/* if you want something (like the header) to be Wider than
-    the other elements, you will need to move that div outside
-    of the container */
-#container {
+#topnavbar {
     max-width: 1100px;
-    /* this is the width of your layout! */
-    /* if you change the above value, scroll to the bottom
-      and change the media query according to the comment! */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbutton {
+    margin-right: 50px;
+}
+
+#swatchClock {
+    float: right;
+    margin-right: 0px;
+}
+
+#indexContainer {
+    max-width: 1100px;
     margin: 0 auto;
     /* this centers the entire page */
 }
-
 
 #flex {
     display: flex;
     
 }
 
+#indexBody main {
+    flex: 1;
+    order: 1;
+    margin-top: 0px;
+}
 
-#rightSidebar {
+#indexBody strong {
+    /* this styles bold text */
+    color: #f5df64;
+}
+
+#indexMain article {
+    margin-top: 10px;
+    background-color: var(--main-light2);
+    flex: 1;
+    padding: 20px;
+    border-color: #08031A;
+    border-radius: 10px;
+    border-width: 4px;
+    border-style:double;
+}
+
+#indexRightAside {
     order: 2;
     margin-left: 10px;
 }
 
-#rightSidebar article {
+#indexRightAside article {
     width: 250px;
     padding: 10px;
     font-size: smaller;
@@ -139,7 +163,7 @@ body {
     border-style:double;
 }
 
-#rightSidebar h2 {
+#indexRightAside h2 {
     background-color: var(--main-dark1);
     border-radius: 20px;
     text-align: center;
@@ -151,7 +175,6 @@ body {
     padding: 0;
 }
 
-
 #other p{
     text-align: center;
     
@@ -160,48 +183,30 @@ body {
 #other a{
     color: white;
 }
-/* this is the color of the main content area,
-    between the sidebars! */
-main {
-    /*background-color: #2d2b77;*/
-    flex: 1;
-    order: 1;
-    margin-top: 0px;
+
+.indexArticleTitleBar {
+    background-color: var(--main-dark1);
+    border-radius: 20px;
 }
 
-article {
-    margin-top: 10px;
-    background-color: var(--main-light2);
-    flex: 1;
-    padding: 20px;
-    border-color: #08031A;
-    border-radius: 10px;
-    border-width: 4px;
-    border-style:double;
-}
-
-#first-box {
+#indexFirstBox {
     height: 300px;
 }
 
-#updates p{
+#indexUpdatesBox p{
     line-height: 10px;
     scrollbar-width: thin;
     scrollbar-color: var(--main-dark1);
 }
 
-#updates .scrollable {
+#indexUpdatesBox .scrollable {
     overflow-y: scroll;
     height: 250px;
 }
-/* what's this "order" stuff about??
-    allow me to explain!
-    if you're using both sidebars, the "order" value
-    tells the CSS the order in which to display them.
-    left sidebar is 1, content is 2, and right sidebar is 3! */
 
 
 
+/* Index End */
 
 footer {
     background-color: var(--main-mid1);
@@ -228,12 +233,18 @@ h1 {
     font-size: 25px;
 }
 
-strong {
-    /* this styles bold text */
-    color: #f5df64;
-}
+
+/* Stomach */
 
 
+
+
+/* Stomach End */
+
+
+
+
+/* Come back to this at some point */
 /* BELOW THIS POINT IS MEDIA QUERY */
 
 /* so you wanna change the width of your page? 
