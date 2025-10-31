@@ -50,6 +50,11 @@
     background-image: var(--body-bg-image);
 }
 
+#indexBody strong {
+    /* this styles bold text */
+    color: #f5df64;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -124,15 +129,10 @@
     
 }
 
-#indexBody main {
+#indexMain {
     flex: 1;
-    order: 1;
+    order: 0;
     margin-top: 0px;
-}
-
-#indexBody strong {
-    /* this styles bold text */
-    color: #f5df64;
 }
 
 #indexMain article {
@@ -147,7 +147,7 @@
 }
 
 #indexRightAside {
-    order: 2;
+    order: 1;
     margin-left: 10px;
 }
 
@@ -168,20 +168,6 @@
     border-radius: 20px;
     text-align: center;
 
-}
-
-#list-links ul {
-    margin: 0;
-    padding: 0;
-}
-
-#other p{
-    text-align: center;
-    
-}
-
-#other a{
-    color: white;
 }
 
 .indexArticleTitleBar {
