@@ -1,5 +1,5 @@
 :root {
-    --header-image: url('/images/banners/banner1.png');
+    --header-image: url('/images/banners/starbanner.png');
     --body-bg-image: url('/images/backgrounds/blue185.jpg');
 
      /* colors */
@@ -44,15 +44,9 @@
     font-family: 'intel one', sans-serif;
     padding: 0;
     margin: 0;
-    /* you can delete the line below if you'd prefer to not use an image */
     background-size: 150px;
     color: #fceaff;
     background-image: var(--body-bg-image);
-}
-
-#indexBody strong {
-    /* this styles bold text */
-    color: #f5df64;
 }
 
 * {
@@ -65,14 +59,14 @@
     background-color: #000000;
     /* header color here! */
     height: 150px;
-    /* this is only for a background image! */
-    /* if you want to put images IN the header, 
-      you can add them directly to the <div id="header"></div> element! */
-    background-image: var();
-    background-size: 100%;
+    background-image: var(--header-image);
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    display: flex;
 }
 
-/* navigation section!! */
+/* Navbar */
 .topbar {
     height: 40px;
     background-color: var(--main-mid1);
@@ -117,6 +111,8 @@
     float: right;
     margin-right: 0px;
 }
+
+/* Navbar End */
 
 #indexContainer {
     max-width: 1100px;
@@ -173,16 +169,22 @@
 .indexArticleTitleBar {
     background-color: var(--main-dark1);
     border-radius: 20px;
+    text-indent: 25px;
 }
 
 #indexFirstBox {
     height: 300px;
 }
 
+#indexFirstBox p {
+    color: #f5df64;
+}
+
 #indexUpdatesBox p{
     line-height: 10px;
     scrollbar-width: thin;
     scrollbar-color: var(--main-dark1);
+    color: white;
 }
 
 #indexUpdatesBox .scrollable {
@@ -194,6 +196,7 @@
 
 /* Index End */
 
+/* Footer */
 footer {
     background-color: var(--main-mid1);
     /* background color for footer */
@@ -208,6 +211,17 @@ footer {
     border-style:double;
     margin-top: 10px;
 }
+
+footer a {
+    text-decoration: none;
+    color: yellow
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer End */
 
 h1,
 h2,
