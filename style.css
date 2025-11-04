@@ -236,7 +236,20 @@ h1 {
 
 /* Stomach */
 
+body.stomach {
+    font-family: 'intel one', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-size: 0px;
+    color: #fceaff;
+    background-image: var();
+}
 
+#header.stomach {
+    background-image: none;
+    width: 100%;
+    height: 100px;
+}
 
 
 /* Stomach End */
