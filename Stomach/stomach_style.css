@@ -1,0 +1,59 @@
+:root {
+    --header-image: url();
+    --body-bg-image: url();
+
+     /* colors */
+  --content: var();
+
+  --main-light1: #8197BC;
+  --main-light2: #536E9C;
+  --main-mid1: #355284;
+  --main-mid2: #213E6F;
+  --main-dark1: #0D2855;
+
+}
+
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Italic.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+body.stomach {
+    font-family: 'intel one', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-size: 0px;
+    color: #fceaff;
+    background-image: var();
+}
+
+#header.stomach {
+    background-image: none;
+    width: 100%;
+    height: 100px;
+}
+
+#container.stomach {
+    
+}
