@@ -184,3 +184,20 @@ a.stomach-nav {
 a.stomach-nav:hover {
     color: green;
 }
+
+#post-list-title {
+    color: blue;
+}
+
+#post-image-grid {
+    display: grid;
+    align-items: left;
+    grid-template-columns: auto 1fr;
+    column-gap: 12px;
+    overflow-wrap: normal;
+}
+
+#post-image-grid img {
+    height: 100px;
+    width: auto;
+}
