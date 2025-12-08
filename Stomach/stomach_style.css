@@ -68,11 +68,17 @@ body {
 }
 
 
-#container {
+#mainpage-container {
     max-width: 900px;
     margin: 0 auto;
 }
 
+#grid { 
+    max-width: 1150px;
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0 auto;
+}
 
 #flex {
     display: flex;
@@ -90,6 +96,7 @@ main {
     border-width: 4px;
     border-style: inset;
     color: white;
+    padding: 15px;
 }
 
 main a {
@@ -106,6 +113,74 @@ main a:hover {
     height: auto;
 }
 
+.large-text {
+    font-size: large;
+}
+
+.small-text {
+    font-size: small;
+}
+
 footer {
     color: white;
+}
+
+/* 
+
+Tongue Blog CSS
+
+*/
+
+#blog-content {
+    opacity:1;transition:opacity 0.4s ease;
+}
+
+#blog-content.fade-out {
+    opacity: 0;
+}
+
+#blog-nav {
+    text-align:center;
+}
+
+.greyedout {
+    opacity:0.5;pointer-events:none;
+}
+
+#tongue-container {
+    max-width: 750px;
+    margin: 0 auto;
+    width: 750px;
+}
+
+.blank-grid {
+    width: 175px;
+}
+
+.nav-grid {
+    width: 175px;
+    margin-top: 50px;
+    position: sticky;
+}
+
+nav.stomach-nav {
+    width: 100%;
+    padding: 4px;
+    height: min-content;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    border-color: red;
+    border-width: 4px;
+    border-style: outset;
+}
+
+a.stomach-nav {
+    font-size: small;
+    color: red;
+}
+
+a.stomach-nav:hover {
+    color: green;
 }
