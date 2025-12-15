@@ -1,4 +1,4 @@
-const lastPoste = 1; // You need to MANUALLY change this to the number of your last/newest poste each time.
+const lastPoste = 2; // You need to MANUALLY change this to the number of your last/newest poste each time.
 const firstPoste = 1; // This is the first poste. Don't change this unless your first poste is not 1 for some reason.
 let currentPosteId = null;
 let init = false;
