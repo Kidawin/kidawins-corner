@@ -121,6 +121,10 @@ main a:hover {
     font-size: small;
 }
 
+ul.no-bullets {
+    list-style-type: none;
+}
+
 footer {
     color: white;
 }
