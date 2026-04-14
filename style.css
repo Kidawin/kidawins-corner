@@ -3,16 +3,7 @@
     --body-bg-image: url('/images/backgrounds/blue185.jpg');
 
      /* colors */
-  --content: var(--main-light2);
-
-  --main-light1: #8197BC;
-  --main-light2: #536E9C;
-  --main-mid1: #355284;
-  --main-mid2: #213E6F;
-  --main-dark1: #0D2855;
-
 }
-
 
 @font-face {
     font-family: intel one;
@@ -38,29 +29,16 @@
     font-weight: bold;
 }
 
-/* Index */
-
-#indexBody {
+body {
     font-family: 'intel one', sans-serif;
     padding: 0;
     margin: 0;
-    background-size: 150px;
-    color: #fceaff;
-    background-image: var(--body-bg-image);
+    width: 100%;
+    height: 100%;
+    background-color: black;
 }
 
-#indexContainer {
-    max-width: 1100px;
-    margin: 0 auto;
-    /* this centers the entire page */
-}
-
-* {
-    box-sizing: border-box;
-}
-
-
-#header {
+.header {
     width: 100%;
     background-color: #000000;
     /* header color here! */
@@ -73,23 +51,29 @@
 }
 
 /* Navbar */
+
 .topbar {
-    height: 40px;
-    background-color: var(--main-mid1);
+    height: 38px;
+    background-color: lightskyblue;
     /* navbar color */
     width: 100%;
     z-index: 99;
     align-items: center;
-    padding: 6px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     position: sticky;
     top: 0;
     overflow: hidden;
 }
 
 /* navigation links*/
+
+#topnavbar {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .topbar a {
     color: rgb(255, 255, 255);
     /* navbar text color */
@@ -103,173 +87,71 @@
     text-decoration: underline;
 }	
 
-#topnavbar {
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .navbutton {
     margin-right: 50px;
 }
 
-#swatchClock {
-    float: right;
-    margin-right: 0px;
+/* Index */
+
+.grid-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 75% 25%;
 }
 
-/* Navbar End */
-
-#flex {
-    display: flex;
-    
-}
-
-#indexMain {
-    flex: 1;
-    order: 0;
-    margin-top: 0px;
-}
-
-#indexMain article {
-    margin-top: 10px;
-    background-color: var(--main-light2);
-    flex: 1;
-    padding: 20px;
-    border-color: #08031A;
-    border-radius: 10px;
+main {
+    height: auto;
+    width: auto;
+    background-color: black;
+    border-color: lightskyblue;
+    border-radius: 0;
     border-width: 4px;
-    border-style:double;
+    border-style: inset;
+    color: white;
+    padding: 15px;
 }
 
-#indexRightAside {
-    order: 1;
-    margin-left: 10px;
+.article-title {
+    background-color: black;
+    border-radius: 0px;
+    text-indent: 20px;
 }
 
-#indexRightAside article {
-    width: 250px;
-    padding: 10px;
-    font-size: smaller;
-    margin-top: 10px;
-    background-color: var(--main-mid2);
-    border-color: #000000;
-    border-radius: 10px;
-    border-width: 4px;
-    border-style:double;
-}
+/* Updates scroll box */
 
-#indexRightAside h2 {
-    background-color: var(--main-dark1);
-    border-radius: 20px;
-    text-align: center;
-
-}
-
-.indexArticleTitleBar {
-    background-color: var(--main-dark1);
-    border-radius: 20px;
-    text-indent: 25px;
-}
-
-#indexFirstBox {
-    height: 300px;
-}
-
-#indexFirstBox p {
-    color: #f5df64;
-}
-
-#indexUpdatesBox p{
+#site-updates p{
     line-height: 10px;
     scrollbar-width: thin;
-    scrollbar-color: var(--main-dark1);
     color: white;
 }
 
-#indexUpdatesBox .scrollable {
+#site-updates .scrollable {
     overflow-y: scroll;
     height: 250px;
+    font-size: small;
 }
 
+/* Right side of grid */
 
-
-/* Index End */
+.grid-section {
+    background-color: black;
+    border-color: lightskyblue;
+    border-radius: 0;
+    border-width: 4px;
+    border-style: inset;
+    color: white;
+    padding: 15px;
+}
 
 /* Footer */
+
 footer {
-    background-color: var(--main-mid1);
-    /* background color for footer */
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    text-align: center;
-    /* this centers the footer text */
-    border-color: #08031A;
-    border-radius: 10px;
-    border-width: 4px;
-    border-style:double;
-    margin-top: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+    font-size: small;
 }
 
-footer a {
-    text-decoration: none;
-    color: yellow
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Footer End */
-
-h1,
-h2,
-h3 {
-    color: var();
-            }
-
-h1 {
-    font-size: 25px;
-}
-
-
-/* Come back to this at some point */
-/* BELOW THIS POINT IS MEDIA QUERY */
-
-/* so you wanna change the width of your page? 
-    by default, the container width is 900px.
-    in order to keep things responsive, take your new height,
-    and then subtrack it by 100. use this new number as the 
-    "max-width" value below
-    */
-
-            @media only screen and (max-width: 1000px) {
-                #flex {
-                    flex-wrap: wrap;
-                }
-
-                aside {
-                    width: 100%;
-                }
-
-                /* the order of the items is adjusted here for responsiveness!
-      since the sidebars would be too small on a mobile device.
-      feel free to play around with the order!
-      */
-                main {
-                    order: 1;
-                }
-
-                #leftSidebar {
-                    order: 2;
-                }
-
-                #rightSidebar {
-                    order: 3;
-                }
-
-                #navbar ul {
-                    flex-wrap: wrap;
-                }
-            }
+have to switch back to flex for the middle grid

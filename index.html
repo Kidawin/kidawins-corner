@@ -6,102 +6,78 @@
     <title>Kidawin's Homepage</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body id="indexBody">
-    <div id="header"></div>
+  <body>
+    <div class="header"></div>
     <nav class="topbar">
         <div id="topnavbar">
 	        <a class="navbutton" href="index.html">Home</a>
-	        <a class="navbutton" href="../stomach/stomach.html">Stomach</a>
-            <span id="swatchClock">@000</span>
-            <script defer src="https://melonking.net/scripts/swatchTime.js"></script>
+	        <a class="navbutton" href="../blog/blog.html">Blog</a>
         </div>
-            
     </nav>
-        <div id="indexContainer">
-           
-            <div id="flex">
-                <main id="indexMain">
-                    <article id="indexFirstBox">
-                    <h1 class="indexArticleTitleBar">Welcome to my home page!</h1>
+
+    <div class="grid-container">
+        <main id="content">
+            <article id="indexFirstBox">
+                <h1 class="article-title">Welcome to my home page!</h1>
                     <p>I'm Kidawin, and this site is <i>Very</i> under construction. I'm learning so it'll take quite a while, and I might pause working on it at times.</p>
                     <p>Also this will not be mobile friendly for a long while, but I will get to it eventually.</p>
                     <p></p>
 
-                    
-                    
-                    </article>
+            </article>
 
-                    <article id="indexUpdatesBox">
-                        <h2 class="indexArticleTitleBar">Site Updates</h2>
-                        <div class="scrollable">
-                        <ul>
-                            <li><b>12-7-25</b>
-                                <p>Added the blog page and the first entry</p>
-                                <p>Tried doing a grid with it instead, was confusing me</p>
-                                <p>I will have to improve the readability and look of it in the future.</p>
-                                <p>Okay second try with the pictures and text side by side in the blog was so nice</p>
-                            </li>
-                            <li><b>11-30-25</b>
-                                <p>Worked on new Stomach page</p>
-                                <p>Prepped for starting a blog with Zonelets</p>
-                                <p>Switched all Stomach related files to be in their own folder and made a new stylesheet for it</p>
-                            </li>
-                            <li><b>11-3-25</b>
-                                <p>New banner image and some more flair to the headings</p>
-                                <p>Started Stomach</p>
-                            </li>
-                            <li><b>9-29-25: </b>
-                                <p>Changing up the header area</p>
-                                <p>Fixed a lot of my css and removed some bloat</p>
-                                <p>Finally learning and having fun, when I actually sit down and do this</p>
-                            </li>
-                            <li><b>9-24-25: </b>
-                                <p>Finally returning to this, I changed up a lot of the colors but I still have a lot of work to do, still looks too much like the template.</p>
-                            </li>
-                            <li><b>6-10-25: </b>
-                                <p>Added a lot to the side bar</p>
-                                <p>Found out about hotlinking</p>
-                                <p>Stopped hotlinking</p>
-                                <p>Added guestbook!</p>
-                                <p>Swapped for temp banner</p>
-                            </li>
-                            <li><b>6-9-25: </b>
-                                <p>Updated some of the looks</p>
-                                <p>Changed this update box</p>
-                                <p>Started Credits page</p>
-                                <p>Learned a lot!</p>
-                            </li>
-                            <li><b>6-8-25</b>
-                                <p>Started this site!</p>
-                                <p>Learning HTML and CSS, maybe some JS</p>
-                            </li>
-                        </ul>
-                        </div>
-                    </article>
-
-                </main>
-                
-                <aside id="indexRightAside">
-                    <article>
-                    <h2>Status</h2>
-                    <div>
-                        <p>///</p>
-                        <p></p>
-                    </div>
-                    </article>
-                    <article>
-                        <h2>To Do:</h2>
-                        <ul>
-                            <li><p>"Stomach"</p></li>
-                            <li><p>Links/Credits</p></p.></li>
-                        </ul>
-                        
-                    </article>
-                </aside>
-                
-                
-            </div>
-            <footer id="footer">Site by <a href="https://neocities.org/site/kidawin">Kidawin</a>, thank you for visiting.</footer>
+            <article id="site-updates">
+                <h2 class="article-title">Site Updates</h2>
+                <div class="scrollable">
+                    <ul>
+                        <li><b>12-7-25</b>
+                            <p>Added the blog page and the first entry</p>
+                            <p>Tried doing a grid with it instead, was confusing me</p>
+                            <p>I will have to improve the readability and look of it in the future.</p>
+                            <p>Okay second try with the pictures and text side by side in the blog was so nice</p>
+                        </li>
+                        <li><b>11-30-25</b>
+                            <p>Worked on new Stomach page</p>
+                            <p>Prepped for starting a blog with Zonelets</p>
+                            <p>Switched all Stomach related files to be in their own folder and made a new stylesheet for it</p>
+                        </li>
+                        <li><b>11-3-25</b>
+                            <p>New banner image and some more flair to the headings</p>
+                            <p>Started Stomach</p>
+                        </li>
+                        <li><b>9-29-25: </b>
+                            <p>Changing up the header area</p>
+                            <p>Fixed a lot of my css and removed some bloat</p>
+                            <p>Finally learning and having fun, when I actually sit down and do this</p>
+                        </li>
+                        <li><b>9-24-25: </b>
+                            <p>Finally returning to this, I changed up a lot of the colors but I still have a lot of work to do, still looks too much like the template.</p>
+                        </li>
+                        <li><b>6-10-25: </b>
+                            <p>Added a lot to the side bar</p>
+                            <p>Found out about hotlinking</p>
+                            <p>Stopped hotlinking</p>
+                            <p>Added guestbook!</p>
+                            <p>Swapped for temp banner</p>
+                        </li>
+                        <li><b>6-9-25: </b>
+                            <p>Updated some of the looks</p>
+                            <p>Changed this update box</p>
+                            <p>Started Credits page</p>
+                            <p>Learned a lot!</p>
+                        </li>
+                        <li><b>6-8-25</b>
+                            <p>Started this site!</p>
+                            <p>Learning HTML and CSS, maybe some JS</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+        <div class="grid-section">
+            <p>test</p>
         </div>
+    </div>
+
+    <footer id="footer">Site by <a href="https://neocities.org/site/kidawin">Kidawin</a> / 2025-2026</footer>
   </body>
 </html>

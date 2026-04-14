@@ -1,0 +1,271 @@
+:root {
+    --header-image: url('/images/banners/starbanner.png');
+    --body-bg-image: url('/images/backgrounds/blue185.jpg');
+
+     /* colors */
+  --content: var(--main-light2);
+
+  --article-background-blue1: #d0ebff;
+  --article-h-bg-blue: #1c7ed6;
+  --main-light2: #d0ebff;
+  --main-mid1: #355284;
+  --main-mid2: #213E6F;
+  --main-dark1: #0D2855;
+
+}
+
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-Italic.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: intel one;
+    src: url('/fonts/intelonemono/IntelOneMono-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Index */
+
+#indexBody {
+    font-family: 'intel one', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-size: 150px;
+    color: black;
+    background-image: var(--body-bg-image);
+}
+
+#indexContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* this centers the entire page */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#header {
+    width: 100%;
+    background-color: #000000;
+    /* header color here! */
+    height: 150px;
+    background-image: var(--header-image);
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    display: flex;
+}
+
+/* Navbar */
+.topbar {
+    height: 40px;
+    background-color: var(--main-mid1);
+    /* navbar color */
+    width: 100%;
+    z-index: 99;
+    align-items: center;
+    padding: 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+/* navigation links*/
+.topbar a {
+    color: rgb(255, 255, 255);
+    /* navbar text color */
+    font-weight: 800;
+    text-decoration: none;
+    /* this removes the underline */
+}
+
+.topbar a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}	
+
+#topnavbar {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbutton {
+    margin-right: 50px;
+}
+
+/* Navbar End */
+
+#flex {
+    display: flex;
+    
+}
+
+#indexMain {
+    flex: 1;
+    order: 0;
+    margin-top: 0px;
+}
+
+#indexMain article {
+    margin-top: 10px;
+    background-color: var(--article-background-blue1);
+    flex: 1;
+    padding: 20px;
+    border-color: #08031A;
+    border-radius: 10px;
+    border-width: 4px;
+    border-style:double;
+}
+
+#indexRightAside {
+    order: 1;
+    margin-left: 10px;
+}
+
+#indexRightAside article {
+    width: 250px;
+    padding: 10px;
+    font-size: smaller;
+    margin-top: 10px;
+    background-color: var(--main-mid2);
+    border-color: #000000;
+    border-radius: 10px;
+    border-width: 4px;
+    border-style:double;
+}
+
+#indexRightAside h2 {
+    background-color: var(--main-dark1);
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.indexArticleTitleBar {
+    background-color: var(--article-h-bg-blue);
+    border-radius: 20px;
+    text-indent: 25px;
+}
+
+#indexFirstBox {
+    height: 300px;
+}
+
+#indexFirstBox p {
+    color: black;
+}
+
+#indexUpdatesBox p{
+    line-height: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-dark1);
+    color: white;
+}
+
+#indexUpdatesBox .scrollable {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+
+
+/* Index End */
+
+/* Footer */
+footer {
+    background-color: var(--main-mid1);
+    /* background color for footer */
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    /* this centers the footer text */
+    border-color: #08031A;
+    border-radius: 10px;
+    border-width: 4px;
+    border-style:double;
+    margin-top: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: yellow
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer End */
+
+h1,
+h2,
+h3 {
+    color: var();
+            }
+
+h1 {
+    font-size: 25px;
+}
+
+
+/* Come back to this at some point */
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 1000px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
